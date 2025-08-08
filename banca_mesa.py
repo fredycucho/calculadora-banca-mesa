@@ -27,7 +27,7 @@ for nombre, valor in denominaciones.items():
     cantidades[nombre] = st.number_input(
         f"{nombre} (${valor:,})", 
         min_value=0, 
-        value=None, 
+        value=0, 
         step=1
     )
 
@@ -59,3 +59,4 @@ st.table({
     "Total": [f"${cantidades[n] * denominaciones[n]:,.0f}" for n in denominaciones.keys()]
 
 })
+
